@@ -1,66 +1,43 @@
-let age = Number(prompt("Enter your age:"));
-let permission = age <18 ?  "Denied" : "Allowed";
-console.log(`You are ${permission} to vote.`);
-
-let ID = true;
-//let Id = Number(prompt("Enter your id number"));
-let group = ID ? "You are an adult" : "You are still a kid";
-console.log(group);
-
-let num = Math.random();
-num = num * 8 ;
-side = Math.floor(num);
-console.log(side);
-
-
-//Rock paper scissors game
-// let computer = "scissors";
-// let playerOne = "rock";
-// let winner = 
-// playerOne === computer ? "Tie game!"
-// :playerOne === "rock" && computer === "paper"
-// ? "Computer wins!"
-// :playerOne === "paper" && computer === "scissors"
-// ? "Computer wins!"
-// :playerOne === "scissors"  && computer === "rock"
-// ? "Computer wins!"
-// :"Player one wins!"
-
-// console.log(winner);
-
-let choices = ["rock", "paper", "scissors"];
-let randomIndex = Math.floor(Math.random(choices) * choices.length);
-let computerChoice = randomIndex;
-console.log(computerChoice);
-function game(){
-  let playerOneChoice = prompt("Do you choose 'rock', 'paper', or 'scissors'?");
-  let victor =
-    playerOneChoice === computerChoice 
-    ? "Tie game"
-    :playerOneChoice === "rock" && computerChoice === 3
-    ? "Player One wins!"
-    :playerOneChoice === "paper" && computerChoice === 1
-    ? "Player one Wins!"
-    :playerOneChoice === "scissors" && computerChoice === 2
-    ? "Player one Wins!"
-    : "Computer wins!"
-
-console.log(victor);
-let message = (`User entered ${playerOneChoice} and the computer chose ${computerChoice}`);
-console.log(message);
+//Lopps
+//1. while loop
+let someArray = ["Mike", "Antal", "Marc", "Emir", "Louiza", "Jacky"];
+let notFound = true;
+while (notFound && someArray.length > 0) {
+ if (someArray[0] === "Antal") {
+ console.log("Found her!");
+ notFound = false;
+ } else {
+ someArray.shift();
+ console.log(someArray);
+ }
 }
 
-let play =  confirm ("Do you want to play?");
-if (play){
-  game();
-}else{
-  console.log("Oopps! Maybe next time!");
-}
+//Fibonacci using while loops
+let nr1 = 0;
+let nr2 = 1;
+let temp;
+let fibonacciArray = [];
 
-
-let repeat = confirm("Do you wish to play again?");
-if (repeat){
-  game();
-}else{
-  console.log("Thank you for the rounds you've played!");
+while (fibonacciArray.length <31){
+  fibonacciArray.push(nr1);
+  temp = nr1 + nr2;
+  nr1 = nr2;
+  nr2 = temp;
+  
 }
+console.log(fibonacciArray);
+
+// let maximum = 10;
+// while (maximum){
+//   let randomNumber = Math.floor(Math.random);
+//   console.log(maximum);
+// }
+
+//2. For Loops
+let arr = [];
+for (let i = 0; i <15; i++){
+  arr.push(i);
+  console.log(arr);
+}
+console.log(arr);
+
