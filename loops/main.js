@@ -41,3 +41,11 @@ for (let i = 0; i <15; i++){
 }
 console.log(arr);
 
+let arrayOfArrays = [];
+for (let i = 0; i<3; i++){
+  arrayOfArrays.push(i);
+  for (let j =0; j <7; j++){
+    arrayOfArrays[i].push(j);
+  }
+}
+console.log(arrayOfArrays);
