@@ -51,8 +51,8 @@ for (let i = 0; i<3; i++){
 console.log(arrayOfArrays);
 console.table(arrayOfArrays);
 
-let names = ["Chella", "John", "Maxime", "Bobbi"];
-for (let i = 0; i< names.length; i++){
-  names = "Hello " + names;
-  console.log(names);
-}
+// let names = ["Chella", "John", "Maxime", "Bobbi"];
+// for (let i = 0; i< names.length; i++){
+//   names = "Hello " + names;
+//   console.log(names);
+// }
