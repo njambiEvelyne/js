@@ -45,7 +45,14 @@ let arrayOfArrays = [];
 for (let i = 0; i<3; i++){
   arrayOfArrays.push(i);
   for (let j =0; j <7; j++){
-    arrayOfArrays[i].push(j);
+    arrayOfArrays.push(j);
   }
 }
 console.log(arrayOfArrays);
+console.table(arrayOfArrays);
+
+// let names = ["Chella", "John", "Maxime", "Bobbi"];
+// for (let i = 0; i< names.length; i++){
+//   names = "Hello " + names;
+//   console.log(names);
+// }
