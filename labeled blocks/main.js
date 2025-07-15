@@ -10,7 +10,7 @@ for (let group of groups) {
   for (let member of group) {
     if (member.startsWith("M")){
       console.log("found one starting with M:", member);
-      continue inner;
+      continue outer;
     }
   }
 }
