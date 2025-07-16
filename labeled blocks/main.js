@@ -14,3 +14,17 @@ for (let group of groups) {
     }
   }
 }
+
+// function getRecursive(nr) {
+//  console.log(nr);
+//  getRecursive(--nr);
+// }
+// getRecursive(3);
+
+function getRecursive(nr) {
+ console.log(nr);
+ if (nr > 0) {
+ getRecursive(--nr);
+ }
+}
+getRecursive(20);
