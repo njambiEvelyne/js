@@ -28,3 +28,14 @@ function getRecursive(nr) {
  }
 }
 getRecursive(20);
+
+function logRecursive(a){
+  console.log("Started function:", a);
+  if (a > 10) {
+    logRecursive(a-1);
+  }else{
+    console.log("Done with recursion");
+  }
+  console.log("Ended function:", a);
+}
+logRecursive(14);
