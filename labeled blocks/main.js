@@ -39,3 +39,39 @@ function logRecursive(a){
   console.log("Ended function:", a);
 }
 logRecursive(14)
+
+function check(x ){
+  x = prompt("Enter the value for X");
+  if (x = 0){
+    console.log(1);
+  }else{
+    (x - 1);
+  }
+}
+
+check(3);
+
+function doOuterFunctionStuff(nt) {
+ console.log("Outer function");
+ doInnerFunctionStuff(nt);
+ function doInnerFunctionStuff(x) {
+ console.log(x + 7);
+ console.log("I can access outer variables:", nt);
+ }
+}
+doOuterFunctionStuff(2);
+//Anonymous Functions
+let variable = function(){
+  console.log("Not secret though.");
+}
+variable();
+
+let unknown = function(z){
+  console.log(z);
+}
+unknown(4);
+
+function anon  (c){
+  console.log(c);
+}
+anon(56);
