@@ -38,4 +38,4 @@ function logRecursive(a){
   }
   console.log("Ended function:", a);
 }
-logRecursive(14);
+logRecursive(14)
