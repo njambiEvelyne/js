@@ -75,3 +75,11 @@ function anon  (c){
   console.log(c);
 }
 anon(56);
+
+//Time waiting for printing
+let youGotThis = function (){
+  console.log("You're doing really well, keep coding");
+};
+//setTimeout(youGotThis, 1000);
+setInterval(youGotThis, 100);
+
