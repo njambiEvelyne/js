@@ -69,19 +69,17 @@ class menuOrder{
     
   }
   calculateTotal(){
-    return (this.numBuger * this.#priceBurger) + (this.numFries * this.#priceFries);
+    let totalPrice = (this.numBuger * this.#priceBurger) + (this.numFries * this.#priceFries);
+    console.log(`Total cost for order is ${totalPrice}.
+      \nYou ordered for ${this.numBuger} bugers and ${this.numFries} fries.`);
   }
-  get totalCost (){
-    return this.calculateTotal();
-  }
+  
 } 
 
-const order1 = new menuOrder(2, 1);
-const order2 = new menuOrder(1,2);
-const order3 = new menuOrder(2, 7);
-
-console.log("Order 1 Total:KES" + order1);
-console.log("Order 2 Total:KES" + order2);
-console.log("Order 3 Total:KES" + order3);
+let order1 = new menuOrder(2, 1);
+order1.calculateTotal();
+let order2 = new menuOrder(1,2);
+order2.calculateTotal();
+let order3 = new menuOrder(2, 7);
 
 
