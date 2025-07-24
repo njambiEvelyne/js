@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <body style="background-color: aqua;">
+    <h1 style="font-family: Arial, Helvetica, sans-serif;">Let's find the treasure</h1>
+    <div id="forest">
+      <div id="tree1">
+        <div id="squirrel"></div>
+        <div id="flower"></div>
+      </div>
+      <div id="tree2">
+        <div id="shrubbery">
+          <div id="treasure"></div>
+        </div>
+        <div id="mushroom">
+          <div id="bug"></div>
+        </div>
+      </div>
+    </div>
+    <h1>Welcome page</h1>
+    <p id="greeting">
+      Hi!
+    </p>
+
+    <h2>Objet Manipulation</h2>
+    <p id = "manipulation">Hello. I hope that you are doing alright today!</p>
+
+ <h1>Just an example</h1>
+ <div id="one" class="example">Hi!</div>
+ <div id="two" class="example">Hi!</div>
+ <div id="three" class="something">Hi!</div>
+ <script>
+  console.log(document.getElementById("two"));
+  console.log(document.getElementById("one"));
+  console.log(document.getElementsByTagName("div").item(8));
+  console.log(document.getElementsByTagName("h1"));
+  console.log(document.getElementsByTagName("p"));
+  console.log(document.getElementsByClassName("example"));
+  console.log(document.querySelector(".something"));
+  console.log(document.querySelector("#forest"));
+  console.log(document.querySelector("#tree2"));
+ </script>
+
+ <div id = "clickhandler">Do not click here!</div>
+ 
+  </body>
+</html>
