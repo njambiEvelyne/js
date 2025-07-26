@@ -39,8 +39,73 @@
   console.log(document.querySelector("#forest"));
   console.log(document.querySelector("#tree2"));
  </script>
+ 
+ <div id = "divvy" onmouseover="changeColor()" style="width: 700px; height: 100px; background-color: pink">
+ <script>
+  function changeColor (){
+    document.getElementById("divvy").style.backgroundColor = "blue";
+  }
+ </script>
+ <br><br><br><br><br><br><br><br>
+ <div id = "doubleClick" onmousedown="alterColor()" style="width: 500px; height: 500px; background-color: red; font-size: large">This displays the double click action to be be launched when the element is double clicked</div>
+
+ <script>
+  function alterColor(){
+    document.getElementById("doubleClick").style.backgroundColor = "Purple";
+  }
+ </script>
 
  <div id = "clickhandler">Do not click here!</div>
- 
+ <br>
+ <script>
+  function reveal(el){
+    console.log(el);
+  }
+ </script>
+ <button onclick="reveal(this)" id = 
+ "Submit Button">Click Here!</button>
+ <script>
+  document.getElementById("Submit Button"); </script>
+  <div id = "descrition" class="part1" style="width: 200px; height: 70px; background-color:chartreuse">
+    <p>This shows the use of event listeners to launc different occurences depending on the mouse action</p>
+  </div>
+  <script>
+    window.onload = function donenow(){
+      console.log("Hi");
+  document.getElementById("description").addEventListener("mousedown",
+function() {changeColor(this, "green");}) ;
+  document.getElementById("description").addEventListener("mouseup", 
+function(){ changeColor (this, "yellow");});
+  document.getElementById("divvy").addEventListener("dblclick", 
+function() { changeColor(this, "black"); });
+ document.getElementById("divvy").addEventListener("mouseout", 
+function() { changeColor(this, "blue"); });
+ }
+ console.log("Hi2");
+
+ function changeColor(ele, color) {
+  ele.style.backgroundColor = color;
+ }
+    
+  </script>
+
+  <div id="divvy" style="width: 100px; height: 100px; background-color: pink;">
+ <script>
+ window.onload = function donenow() {
+ console.log("hi");
+ document.getElementById("divvy").addEventListener("mousedown", 
+function() { changeColor(this, "green"); });
+ document.getElementById("divvy").addEventListener("mouseup", 
+function() { changeColor(this, "yellow"); });
+ document.getElementById("divvy").addEventListener("dblclick", 
+function() { changeColor(this, "black"); });
+ document.getElementById("divvy").addEventListener("mouseout", 
+function() { changeColor(this, "blue"); });
+ }
+ console.log("hi2");
+ function changeColor(el, color) {
+ el.style.backgroundColor = color;
+ }
+ </script>
   </body>
 </html>
