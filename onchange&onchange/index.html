@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event target</title>
+</head>
+<body>
+  <main>
+    <div id = "welcome">Hi there!</div>
+    <form>
+      <input type="text" name="firstname" placeholder="First name"/>
+      <input type="text" name = "lastname" placeholder="Last name"/>
+      <input type="button" onclick="sendInfo()" value="Submit">
+    </form>
+    <script>
+      function sendInfo(){
+        let p = event.target.parentElement;
+        message("Welcome " + p.firstname.value + " " + p.lastname.value);
+      }
+      function message(m){
+        document.getElementById("welcome").innerHTML = m;
+      }
+    </script>
+    <br>
+
+    <style>
+      div {
+      border: 1px solid black;
+      margin-left: 5px;
+      }
+    </style>
+    <div id="message">Bubbling events</div>
+    <div id="output">
+      1
+        <div>
+          2
+          <div>
+            3
+            <div>
+              4
+
+            <div>5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function bubble() {  
+        console.log(this.innerText);
+      }
+      let divs = document.getElementsByTagName("div");
+      for (let i = 0; i < divs.length; i++) {
+          divs[i].addEventListener("click", bubble,true);
+      }
+    </script>
+</main>
+  
+</body>
+</html>
