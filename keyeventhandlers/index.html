@@ -9,8 +9,9 @@
 <body>
   <main>
     <div id="wrapper">JavaScript is fun!</div>
-    <input type="text" name="myNum1" onkeypress="numCheck()">
-    <input type="text" name="myNum2" onkeypress="numCheck2()">
+    <input type="text" name="myNum1" onkeypress="return numCheck()" onpaste = "return false" placeholder="First Value">
+    <br><br>
+    <input type="text" name="myNum2" onkeypress="return numCheck2()" onpaste = "return false"  placeholder="Second Value">
     <script>
       function numCheck() {
       message("Number: " + !isNaN(event.key));
@@ -23,6 +24,10 @@
       function message(m) {
       document.getElementById('wrapper').innerHTML = m;
       }
+      //When one adds the "return numCheck(), it restricts te user to only entering a number value"
+      //No matter how much the user tries to enter another valeu. The input will not be fed into the input box
+
+      //onpaste = "return false". This one deals with smart people who copy and paste numbers to non-numeric field or other characters to a numeric field and still manage to get illigal characters in there
     </script>
   
 </main>
