@@ -1,0 +1,35 @@
+body{
+  background-color: rgb(121, 182, 8);
+  color: gold;
+  font-size: larger;
+  margin-left: 10px;
+}
+title{
+  color: blue;
+  font-size: larger;
+}
+form{
+  border: 1px solid blueviolet;
+  font-weight: 500;
+  background-color: aqua;
+  height: 150px;
+}
+.welcome{
+  color: chocolate;
+}
+#form{
+  width: 6000px;
+  height: 400px;
+  background-color: black;
+}
+.box{
+ height: 200px;
+ width: 200px;
+ padding: 20px;
+ margin: 0 50px;
+ display: inline-block;
+ border: 1px solid black
+}
+#dragme{
+  background-color: red;
+}
