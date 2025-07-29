@@ -1,38 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="main.css">
-  <title>Drag and Drop Elements</title>
+ <title>JS Tester</title>
+ <style>
+   body{
+      background-color: darkmagenta;
+      margin-left: 30px;
+   }
+ .box {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    background-color: rgb(93, 20, 136);
+    display: inline-block;
+    }
+ .red {
+    background-color: red;
+ }
+ #dragme {
+   background-color: red;
+   
+ }
+ </style>
 </head>
 <body>
-  <main>
-    <div id = "description">
-      <h1>Drag and drop Elements</h1>
-    </div>
-    <div class = "box" ondrop="dDrop()" ondragover="nDropn">1
-      <div id = "dragme" ondragstart="dStart()" draggable="true">Drag me please!</div>
-    </div>
-    <div class="box" ondrop="dDrop" ondragover="nDrop()">2</div>
+ <div class="box" ondrop="dDrop()" ondrag="nDrop()">1
+ <div id="dragme" draggable="true" ondragstart="dStart">
+ Drag Me Please!
+ </div>
+ </div>
+ <div class="box" ondrop="dDrop()" ondragover="nDrop()">2</div>
+ <script>
+   function changeOpacity(){
+      document.getElementById("dragme").style.opacity = "0.2";
+   }
+   let holderItem;
+   function dStart(){
+      holderItem = event.target;
+      document.getElementById("dragme").addEventListener("ondragsart", 
+      function (){changeOpacity(this, "0.5");});
+   }
+   function nDrop(){
+      event.preventDefault();
+   }
+   function dDrop(){
+      event.preventDefault();
+      if (event.target.className == "box"){
+         event.target.appendChild(holderItem);
+      }
+   }
 
-    <script>
- let holderItem;
- function dStart() {
- holderItem = event.target;
- }
- function nDrop() {
- event.preventDefault();
- }
-
- function dDrop() {
- event.preventDefault();
- if (event.target.className == "box") {
- event.target.appendChild(holderItem);
- } 
- }
  </script>
-  
-</main>
 </body>
 </html>

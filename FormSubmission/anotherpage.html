@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+ <body>
+  <style>
+    body{
+      background-color: aqua;
+    }
+  </style>
+  <h1>This is the **redirect page** from the main page</h1>
+ <script>
+ let q = window.location.search; 
+ let params = new URLSearchParams(q); 
+ let name = params.get("name");
+ console.log(name);
+ </script>
+ </body>
+</html>
