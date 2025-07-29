@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="main.css">
+  </head>
+ <style>
+ #block {
+ background-color: purple;
+ width: 100px;
+ height: 100px;
+ position: absolute;
+ }
+ #box2{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: absolute;
+ }
+ </style>
+ <body>
+  <script src="main.js"></script>
+ <button onclick="toTheRight()">Go right</button>
+ <div id="block"></div>
+ <br><br><br><br><br>
+ <script>
+ function toTheRight() {
+ let b = document.getElementById("block");
+ let x = 5;
+ setInterval(function () {
+  if (x === 600) {
+ clearInterval();
+ } else {
+ x++;
+ b.style.left = x + "px";
+ }
+ }, 2);
+ 
+ }
+ </script><br>
+
+ 
+ 
+ <button onclick="moveBox()">Go to the right</button>
+ <br>
+ <div id="box2">Box 2</div>
+ <script>
+  let position = 0;
+  const box = document.getElementById("box");
+
+  function moveBox(){
+    if(position <300){
+      position +=5;
+      box.style.left = position + "px";
+      requestAnimationFrame(moveBox);
+    }
+    moveBox();
+  }
+ </script>
+ </body>
+</html>
