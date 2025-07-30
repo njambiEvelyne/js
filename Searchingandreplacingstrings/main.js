@@ -1,19 +1,15 @@
-//Regular expressions
-let text = "I love Javascript";
-console.log(text.match(/JAVASCRIPT/i));
+//Searching and replacing strings 
+console.log("Searching and replacing strings!!");
+let text = "That's not the case.";
+console.log(text.search(/Case/i));
 
-//Specifying multiple options for words
-let text2 = "I love javascript, vue and angular";
-console.log(text.match(/angular|javascript/gi));
+//Replacing
+console.log("This method for global replacement of a string: \n")
+let text2 = "\t\t\tCoding is fun. Coding opens up a lot of opportunities."
+console.log(text2.replace(/Coding/g, "Javascript"));
+console.log("This method only alters the first string it encounters:")
+console.log(text2.replace("Coding", "Javascript"));
 
-//Groups
-console.log("Groups:")
-let text3 = "I love Javascript!";
-console.log(text.match(/(love|dislike)\s(javascript|spiders)/gi));
-
-//Repeating 
-let text4 = "abcabcabcabc";
-console.log(text.match(/(abc){1,2}/));
-
-
-
+let emailPattern = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/g;
+const validEmail =document.getElementById("email");
+console.log(validEmail.match(emailPattern));
